@@ -1,12 +1,12 @@
 {
-  "name": "jalapeno.co.uk",
+  "name": "jalapeno.design",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"npm run dev:*\"",
     "dev:11ty": "eleventy --serve --port=8080",
     "dev:tw": "tailwindcss -i src/assets/css/tailwind.css -c tailwind.config.js -o _site/assets/css/tailwind.css --watch",
+
     "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i src/assets/css/tailwind.css -c tailwind.config.js -o _site/assets/css/tailwind.css --minify"
   },
   "keywords": [],
