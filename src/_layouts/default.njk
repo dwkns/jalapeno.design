@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{{ siteName }}{% if title %} &raquo; {{ title }}{% endif %}{% endblock %}</title>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8"/>
+    {% if description %}<meta name="description" content="{{ description }}"/>{% endif %}
+    {% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
+    {% if author %}<meta name="author" content="{{ author }}">{% endif %}
+    <meta name="robots" content="index, follow"/>
+    <meta name="generator" content="{{ eleventy.generator }}"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <meta name="build" content="{{ buildInfo.hash }}" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/assets/css/tailwind.css?v={% version %}"/>
+
+    <!-- favicon -->
+    <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml"/>
+
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+    <div>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+    </div>
+  </body>
+
+</html>

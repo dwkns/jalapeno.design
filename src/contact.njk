@@ -1,14 +1,16 @@
 ---
+layout: default.njk
+title: Contact
 ---
-{% extends "default.njk" %}
 
 {% block head %}
 <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 {% endblock %}
 
-{% block title %} {{ siteName }}{% endblock %}
+{% block title %} {{ title }}{% endblock %}
 
 {% block content %}
+
   <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
       <img src="/assets/images/logo.svg" alt="Logo" class="h-12 mx-auto mb-4">
@@ -32,6 +34,7 @@
               action="https://formspree.io/f/meoenqye" 
               method="POST" 
               class="max-w-md mx-auto"
+              on-load="getIP()"
               >
 
               <!-- name input -->
