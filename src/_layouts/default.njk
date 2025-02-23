@@ -3,16 +3,7 @@
   <head>
     <title>{% block title %}{{ siteName }}{% if title %} &raquo; {{ title }}{% endif %}{% endblock %}</title>
 
-    <!-- Meta tags -->
-    <meta charset="UTF-8"/>
-    {% if description %}<meta name="description" content="{{ description }}"/>{% endif %}
-    {% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
-    {% if author %}<meta name="author" content="{{ author }}">{% endif %}
-    <meta name="robots" content="index, follow"/>
-    <meta name="generator" content="{{ eleventy.generator }}"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-    <meta name="build" content="" />
+    {% include "seo.njk" %}
 
     <!-- styles -->
     <link rel="stylesheet" href="/assets/css/tailwind.css?v={% version %}"/>
@@ -23,11 +14,31 @@
     {% block head %}{% endblock %}
   </head>
 
-  <body>
-    <div>
+  <body class="bg-white dark:bg-gray-900 text-black dark:text-white">
+    <div class="md:flex w-full min-h-screen mx-auto">
+
+      <!-- column sidebar -->
+      <div class="flex-auto basis-1/4">
+        {% include "sidebar-l.njk" %}
+        
+      </div>
+
+
+
+      <!-- column mainbar -->
+      <div class="flex-auto basis-1/2">
+      <div class="w-[20px] light:bg-[url(/assets/images/optim.svg)] eleventy:ignore h-full fixed dark:bg-[url(/assets/images/optim_dark.svg)]"></div>       
+        <main role="main" class="w-full pl-[20px]">
     {% block content %}
       {{ content | safe }}
     {% endblock %}
+        </main>
+      </div>
+
+      <!-- column sidebar -->
+      <div class="flex-auto basis-1/4">
+        {% include "sidebar-r.njk" %}
+      </div>
     </div>
   </body>
 

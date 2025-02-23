@@ -1,3 +1,19 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography"; /* https://github.com/tailwindlabs/tailwindcss-typography */
 @plugin "@tailwindcss/forms"; 
+
+
+
+/* Custom CSS */
+
+@layer base {
+
+h1 {
+  @apply text-2xl text-blue-500;
+}
+
+h2 {
+  @apply text-xl text-blue-500;
+}
+
+}
