@@ -1,0 +1,43 @@
+  <!-- Swiper -->
+  <div class="w-full border border-gray-200 dark:border-gray-700 p-4 rounded-md">
+    <div class="swiper swiper-container">
+      <div class="swiper-wrapper">
+      {% for slide in slideshow %}
+        <div class="swiper-slide" >
+          <div class="flex justify-center items-center">
+            <img src="{{ slide }}" alt="{{ heading }}" class="rounded" />
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+      <div class="swiper-pagination p-0 absolute -bottom-4" style="bottom: -4px;"></div>
+
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      centeredSlides: true,
+      calculateHeight: true,
+      loop: true,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>

@@ -1,51 +1,39 @@
 ---
 layout: default.njk
+rbar: true
 ---
+
 <div class="max-w-4xl mx-auto pt-20">
   <header class="h-96 relative">
-    <img src="{{ hero_image }}" alt="{{ heading }}" class="w-full h-96 object-cover object-center" />
+    <img src="{{ hero_image }}" alt="{{ heading }}" class="w-full h-96 object-cover object-center rounded-r-lg" />
     <div class="inset-0 flex ml-4 mb-4 items-end top-12 absolute">
-      <h1 class="text-white text-4xl font-bold bg-black/40 p-2 rounded-sm backdrop-blur-xs">{{ heading }}</h1>
+      <h1 class="text-white font-bold bg-black/40 p-2 rounded-sm backdrop-blur-xs">{{ heading }}</h1>
     </div>
   </header>
 
   <!-- main content -->
   <main>
-      <div class="relative">
-        <simg src="{{ hero_image }}" alt="{{ heading }}" width="1024" class="w-full h-96 top-0 sticky">
 
 
-      </div>
+<div class="mx-auto pt-4 px-4 suprose">
 
-
-<div class="mx-auto pt-4 px-4">
-
-<h2>Background</h2>
+<h2 id="background">Background</h2>
 {{ preamble | safe }}
 
-<h2>Problem</h2>
+<h2 id="problem">Problem</h2>
 {{ problem | safe }}
 
 {% if slideshow %}
-  <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-    {% for slide in slideshow %}
-      <img src="{{ slide }}" alt="{{ heading }}" class="w-full h-96 object-cover object-center" loading="lazy" />
-    {% endfor %}
-  </div>
+{% include "swiper.njk" %}
 {% endif %}
 
-<h2>Solution</h2>
+
+<h2 id="solution">Solution</h2>
 {{ solution | safe }}
 
-{% if tags %}
-  <div class="flex flex-wrap gap-2">
-    {% for tag in tags %}
-      <span class="bg-blue-500 text-white px-2 py-1 rounded-sm">{{ tag }}</span>
-    {% endfor %}
-  </div>
-{% endif %}
-
+<div class="h-4"></div>
 </div>
-
   </main>
 </div>
+
+<div class="h-48"></div>

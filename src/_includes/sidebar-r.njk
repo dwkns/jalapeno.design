@@ -1,6 +1,30 @@
-<!-- other nav -->
-<div class="w-full pt-20">
-  other nav
+<!-- right bar -->
+{% if rbar == true %}
+<div class="w-full pt-120 ml-4 min-h-full">
+  <div class="sticky top-0 border border-gray-200 dark:border-gray-700 p-4 rounded-md max-w-sm">
+    <div class="mb-2">
+      Reading Time: 3 minutes
+    </div>
+    <div class="mb-2">
+      <h3 class="">Table of Contents:</h3>
+      <ul class="list-disc list-inside">
+        <li><a href="#background">Background</a></li>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#solution">Solution</a></li>
+      </ul>
+    </div>
+
+{% if tags %}
+  <div class="mb-2">
+    <h3 class="text-lg">Tags:</h3>
+  </div>
+  <div class="flex flex-wrap gap-2 mb-4">
+    {% for tag in tags %}
+      <span class="bg-blue-500 text-white px-2 py-1 rounded-lg">{{ tag }}</span>
+    {% endfor %}
+  </div>
+{% endif %}</div>
 </div>
 
-<!-- end other nav -->
+{% endif %}
+    <!-- end right bar -->  
