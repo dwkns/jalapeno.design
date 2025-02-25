@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5, h6 {
   @apply text-gray-600 dark:text-gray-200;
 }
 
+.suprose p {
+  @apply mb-8;
+}
+
  .swiper-container {
   width:100%;
   @apply h-96;

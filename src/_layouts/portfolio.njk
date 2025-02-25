@@ -15,24 +15,11 @@ rbar: true
   <main>
 
 
-<div class="mx-auto pt-4 px-4 suprose">
+    <div class="mx-auto pt-4 px-4 suprose">
 
-<h2 id="background">Background</h2>
-{{ preamble | safe }}
+  {{ content | safe }}
 
-<h2 id="problem">Problem</h2>
-{{ problem | safe }}
-
-{% if slideshow %}
-{% include "swiper.njk" %}
-{% endif %}
-
-
-<h2 id="solution">Solution</h2>
-{{ solution | safe }}
-
-<div class="h-4"></div>
-</div>
+    </div>
   </main>
 </div>
 

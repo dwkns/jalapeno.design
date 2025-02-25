@@ -3,13 +3,14 @@
 <div class="w-full pt-120 ml-4 min-h-full">
   <div class="sticky top-0 border border-gray-200 dark:border-gray-700 p-4 rounded-md max-w-sm">
     <div class="mb-2">
-      Reading Time: 3 minutes
+      Reading Time: {{ content | timeToRead }} 
     </div>
     <div class="mb-2">
       <h3 class="">Table of Contents:</h3>
       <ul class="list-disc list-inside">
         <li><a href="#background">Background</a></li>
         <li><a href="#problem">Problem</a></li>
+        <li><a href="#slideshow">Slideshow</a></li>
         <li><a href="#solution">Solution</a></li>
       </ul>
     </div>
@@ -20,7 +21,9 @@
   </div>
   <div class="flex flex-wrap gap-2 mb-4">
     {% for tag in tags %}
+    {% if tag != "portfolio" %}
       <span class="bg-blue-500 text-white px-2 py-1 rounded-lg">{{ tag }}</span>
+    {% endif %}
     {% endfor %}
   </div>
 {% endif %}</div>
