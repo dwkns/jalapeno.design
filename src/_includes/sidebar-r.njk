@@ -22,11 +22,14 @@
   <div class="flex flex-wrap gap-2 mb-4">
     {% for tag in tags %}
     {% if tag != "portfolio" %}
-      <span class="bg-blue-500 text-white px-2 py-1 rounded-lg">{{ tag }}</span>
+    <a href="/tags/{{ tag | slug }}/" class="bg-blue-200 dark:bg-blue-700 text-gray-800 dark:text-white px-2 py-1 rounded-lg hover:bg-blue-300 dark:hover:bg-blue-600 transition duration-300">
+      {{ tag }}
+    </a>
     {% endif %}
     {% endfor %}
   </div>
 {% endif %}</div>
+
 </div>
 
 {% endif %}

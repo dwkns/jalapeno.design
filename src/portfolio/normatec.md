@@ -11,6 +11,7 @@ hero_image: /assets/images/normatec/normatec_hero_2000x1000.jpg
 
 slideshow: ["https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_LHS_1_690x450.jpg" , 
   "https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_Process_5_450x355.jpg",
+  "https://res.cloudinary.com/dqvadtc7k/image/upload/v1740521801/IMG_2296_va1cty.jpg",
   "https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_Process_7_450x355.jpg"]
 ---
 

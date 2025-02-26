@@ -1,0 +1,34 @@
+---
+title: Portfolio
+layout: default.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag | slug }}/
+---
+
+{% set currentUrl = page.url %}
+{% set urlParts = currentUrl | split('/') %}
+{% set currentTag = "" %}
+
+{% for part in urlParts %}
+  {% if part %}
+    {% set currentTag = part %}
+  {% endif %}
+{% endfor %}
+
+<!-- current url: {{ currentUrl }} -->
+<p>current tag: {{ currentTag }}</p>
+
+<ul class="list-disc pl-5">
+  {%- for project in collections.portfolio %}
+    {% for tag in project.data.tags %}
+      {% if tag == currentTag %}
+        <li>
+          <a href="{{ project.url }}">{{ project.data.title }}</a>
+        </li>
+      {% endif %}
+    {%- endfor %}
+  {%- endfor %}
+</ul>

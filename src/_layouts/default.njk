@@ -13,28 +13,31 @@
     {% block head %}{% endblock %}
   </head>
 
-  <body class="bg-white dark:bg-gray-900 text-black dark:text-white">
-    {% include "tw_size.njk" %}
-    <div class="md:flex w-full min-h-screen mx-auto">
+  <body class="bg-white dark:bg-gray-900 text-black dark:text-white">{% include "tw_size.njk" %}
+    <div class="md:flex max-w-[1400px] min-h-screen mx-auto">
 
-      <!-- column sidebar -->
-      <div class="flex-auto basis-1/4">
+      <!-- column sidebar-l -->
+      <div class="w-xs order-1">
         {% include "sidebar-l.njk" %}
         
       </div>
 
+      <!-- column divider -->
+      <div class=" w-[20px] order-2">
+        <div class="flex-none w-[20px] fixed bg-[url(/assets/images/optim.svg)] eleventy:ignore h-full dark:bg-[url(/assets/images/optim_dark.svg)] order-2"></div>       
+      </div>
+
       <!-- column mainbar -->
-      <div class="flex-auto basis-1/2">
-      <div class="w-[20px] bg-[url(/assets/images/optim.svg)] eleventy:ignore h-full fixed dark:bg-[url(/assets/images/optim_dark.svg)]"></div>       
-        <main role="main" class="w-full pl-[20px]">
+      <div class="w-lg basis-1/2 order-3">
+        <main role="main" class="w-full">
     {% block content %}
       {{ content | safe }}
     {% endblock %}
         </main>
       </div>
 
-      <!-- column sidebar -->
-      <div class="flex-auto basis-1/4">
+      <!-- column sidebar-r -->
+      <div class="w-xs order-4">
         {% include "sidebar-r.njk" %}
       </div>
 

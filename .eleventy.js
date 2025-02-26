@@ -26,7 +26,6 @@ module.exports = function (eleventyConfig) {
   // read data from .env file to determine dev or prod
   eleventyConfig.addGlobalData("env", process.env.ELEVENTY_ENV);
 
-
   // Plug Ins
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
   eleventyConfig.addPlugin(timeToRead);
@@ -48,12 +47,16 @@ module.exports = function (eleventyConfig) {
   
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  
-
   // Shortcodes
-
   eleventyConfig.addShortcode('version', function () {
     return now
   });
 
+  // Custom Split Filter
+  eleventyConfig.addFilter("split", function(value, delimiter) {
+    if (typeof value === "string") {
+      return value.split(delimiter);
+    }
+    return value;
+  });
 };
