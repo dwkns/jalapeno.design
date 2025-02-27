@@ -17,7 +17,35 @@ h2 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-blue-500 dark:text-blue-300 py-2;
+  @apply text-sky-700 dark:text-sky-300 py-2;
+}
+
+/* custom elements from here */
+
+.a-link, .a-link:link {
+  text-decoration: none;
+  background-position-y: -0%;
+  background-image: linear-gradient( rgba(255,255,255,0) 50%, rgba(3, 105, 161, 1) 50%);
+  transition: background 500ms ease;
+  background-size: 4px;
+  background-size: auto 175%;
+}
+
+.a-link:hover {
+  background-position-y: 100%; 
+  /*background-image: linear-gradient(rgba(3, 105, 161, 0.2) 10%, rgba(3, 105, 161, 0.4) 90%);*/
+  @apply bg-gradient-to-t from-sky-200 to-sky-100;
+  cursor: pointer;
+}
+
+.plain a { /* used when we don't want yellow links */
+  background-image: none;
+} 
+
+
+
+.indy-button {
+  @apply text-white bg-sky-700 dark:bg-sky-500 hover:bg-sky-500 dark:hover:bg-sky-700;
 }
 
 .suprose {

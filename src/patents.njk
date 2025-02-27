@@ -1,0 +1,39 @@
+---
+permalink: /patents/
+layout: default.njk
+title: Patents
+description: A list of patents related to the project.
+tags: [patents]
+---
+
+<h1>{{ title }}</h1>
+
+
+
+
+
+<h2>Granted Patents</h2>
+<p>Note: The patent number is a link to the <a href="https://www.uspto.gov/patents/search" target="_blank">USPTO Patents Search</a> page for the patent.</p>
+
+{% set rowNo = 0 %}
+{% for row in patents.granted %}
+    {% set rowNo = rowNo + 1 %}
+    {% include "patent_tile.njk" %}
+{% endfor %}
+
+<h2>Design Patents</h2>
+
+{% set rowNo = 0 %}
+{% for row in patents.design %}
+    {% set rowNo = rowNo + 1 %}
+    {% include "patent_tile.njk" %}
+{% endfor %}
+
+
+<h2>Patent Applications</h2>
+
+{% set rowNo = 0 %}
+{% for row in patents.applications %}
+    {% set rowNo = rowNo + 1 %}
+    {% include "patent_tile.njk" %}
+{% endfor %}

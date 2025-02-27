@@ -26,7 +26,7 @@ permalink: /tags/{{ tag | slug }}/
     {% for tag in project.data.tags %}
       {% if tag == currentTag %}
         <li>
-          <a href="{{ project.url }}">{{ project.data.title }}</a>
+          <a href="{{ project.url }}" class="a-link">{{ project.data.title }}</a>
         </li>
       {% endif %}
     {%- endfor %}

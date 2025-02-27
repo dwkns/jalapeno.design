@@ -5,7 +5,11 @@ rbar: true
 
 <div class="max-w-4xl mx-auto pt-20">
   <header class="h-96 relative">
-    <img src="{{ hero_image }}" alt="{{ heading }}" class="w-full h-96 object-cover object-center rounded-r-lg" />
+    <img 
+      src="{{ hero_image }}" 
+      alt="{{ heading }}" 
+      eleventy:widths="700"
+      class="w-full h-96 object-cover object-center rounded-r-lg" />
     <div class="inset-0 flex ml-4 mb-4 items-end top-12 absolute">
       <h1 class="text-white font-bold bg-black/40 p-2 rounded-sm backdrop-blur-xs">{{ heading }}</h1>
     </div>

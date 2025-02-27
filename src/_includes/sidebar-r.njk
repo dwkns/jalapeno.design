@@ -1,28 +1,28 @@
 <!-- right bar -->
 {% if rbar == true %}
 <div class="w-full pt-120 ml-4 min-h-full">
-  <div class="sticky top-0 border border-gray-200 dark:border-gray-700 p-4 rounded-md max-w-sm">
+  <div class="sticky top-0 border border-gray-200 dark:border-gray-700 bg-zinc-100 dark:bg-zinc-700 p-4 rounded-md max-w-sm">
     <div class="mb-2">
       Reading Time: {{ content | timeToRead }} 
     </div>
     <div class="mb-2">
       <h3 class="">Table of Contents:</h3>
       <ul class="list-disc list-inside">
-        <li><a href="#background">Background</a></li>
-        <li><a href="#problem">Problem</a></li>
-        <li><a href="#slideshow">Slideshow</a></li>
-        <li><a href="#solution">Solution</a></li>
+        <li><a href="#background" class="a-link">Background</a></li>
+        <li><a href="#problem" class="a-link">Problem</a></li>
+        <li><a href="#slideshow" class="a-link">Slideshow</a></li>
+        <li><a href="#solution" class="a-link">Solution</a></li>
       </ul>
     </div>
 
 {% if tags %}
   <div class="mb-2">
-    <h3 class="text-lg">Tags:</h3>
+    <h3 class="">Tags:</h3>
   </div>
   <div class="flex flex-wrap gap-2 mb-4">
     {% for tag in tags %}
     {% if tag != "portfolio" %}
-    <a href="/tags/{{ tag | slug }}/" class="bg-blue-200 dark:bg-blue-700 text-gray-800 dark:text-white px-2 py-1 rounded-lg hover:bg-blue-300 dark:hover:bg-blue-600 transition duration-300">
+    <a href="/tags/{{ tag | slug }}/" class="indy-button px-2 py-1 rounded-lg transition duration-300">
       {{ tag }}
     </a>
     {% endif %}

@@ -10,6 +10,9 @@ const markdownItAnchor = require("markdown-it-anchor");
 // Time to read plugin
 const timeToRead = require('eleventy-plugin-time-to-read');
 
+// CSV parser
+const { parse } = require('csv-parse');
+
 require('dotenv').config();
 
 module.exports = function (eleventyConfig) {
@@ -18,7 +21,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLayoutsDirectory("_layouts");
 
   eleventyConfig.addPassthroughCopy("src/assets/images");
-
+  eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+  
   eleventyConfig.addWatchTarget("src");
 
   eleventyConfig.addGlobalData("siteName", "jalapeno.design");
@@ -58,5 +62,28 @@ module.exports = function (eleventyConfig) {
       return value.split(delimiter);
     }
     return value;
+  });
+
+    // Custom filter to split Patent Number data
+    eleventyConfig.addFilter("splitPatentNumber", function(value) {
+      const match = value.match(/\[(.*?)\]\((.*?)\)/);
+      if (match) {
+        return {
+          text: match[1],
+          url: match[2]
+        };
+      }
+      return {
+        text: value,
+        url: "#"
+      };
+    });
+
+  eleventyConfig.addDataExtension("csv", (contents) => {
+    const records = parse(contents, {
+      columns: true,
+      skip_empty_lines: true,
+    });
+    return records;
   });
 };

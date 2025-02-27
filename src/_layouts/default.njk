@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <title>{% block title %}{{ siteName }}{% if title %} &raquo; {{ title }}{% endif %}{% endblock %}</title>
+    <!-- preconnect -->
+    <link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="//res.cloundinary.com" crossorigin>    
     {% include "seo.njk" %}
     <!-- styles -->
     <link rel="stylesheet" href="/assets/css/tailwind.css?v={% version %}"/>

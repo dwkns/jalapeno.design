@@ -1,0 +1,8 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+
+Host: https://jalapeno.design
