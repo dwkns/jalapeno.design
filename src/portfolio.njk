@@ -4,25 +4,16 @@ layout: default.njk
 ---
 
 <div class="">
-  <div class="suprose border border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg pr-4 py-4">
+  <div class="border border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg pr-4 py-4">
+    <div class="grid grid-cols-2 gap-4">
 
-<ul>
   {%- for post in collections.portfolio %}
-    <li>
-      <h2>
-        <a href="{{ post.url }}" class="a-link">
-        {{ post.data.title }}
-        </a>
-    </h2>
+{% include "project-card.njk" %}
 
-      <p>
-        {{ post.data.description }}
-        </p>
 
-      <p>{{ post.content | timeToRead }}</p>
-    </li>
+
   {%- endfor %}
-</ul>
 
-</div>
+    </div>
+  </div>
 </div>

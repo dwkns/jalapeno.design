@@ -7,7 +7,7 @@ pagination:
   alias: tag
 permalink: /tags/{{ tag | slug }}/
 ---
-
+<!-- tags start -->
 {% set currentUrl = page.url %}
 {% set urlParts = currentUrl | split('/') %}
 {% set currentTag = "" %}
@@ -17,18 +17,20 @@ permalink: /tags/{{ tag | slug }}/
     {% set currentTag = part %}
   {% endif %}
 {% endfor %}
-
 <!-- current url: {{ currentUrl }} -->
-<p>current tag: {{ currentTag }}</p>
 
-<ul class="list-disc pl-5">
-  {%- for project in collections.portfolio %}
-    {% for tag in project.data.tags %}
-      {% if tag == currentTag %}
-        <li>
-          <a href="{{ project.url }}" class="a-link">{{ project.data.title }}</a>
-        </li>
-      {% endif %}
-    {%- endfor %}
-  {%- endfor %}
-</ul>
+  <div class="border border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg pr-4 py-4">
+    <p>current tag: {{ currentTag }}</p>
+    <div class="grid grid-cols-2 gap-4">
+      <ul class="list-disc pl-5">
+        {%- for post in collections.portfolio %}
+          {% for tag in post.data.tags %}
+            {% if tag == currentTag %}
+                  {% include "project-card.njk" %}
+            {% endif %}
+          {%- endfor %}
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+<!-- tags end -->

@@ -1,5 +1,5 @@
 ---
-title: Echo
+title: Skin Abrader
 layout: portfolio.njk
 description: "a thing that makes sound"
 author: jalapeno.design

@@ -6,16 +6,10 @@
 
 @layer base {
 
-body {
-  font-family: "Red Hat Text", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
+  @theme {
+    --font-sans: InterVariable, sans-serif; /* https://tailwindui.com/documentation#add-the-inter-font-family */
+  }
+  
 
 h1 {
   @apply text-4xl;
