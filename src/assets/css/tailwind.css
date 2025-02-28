@@ -2,11 +2,20 @@
 @plugin "@tailwindcss/typography"; /* https://github.com/tailwindlabs/tailwindcss-typography */
 @plugin "@tailwindcss/forms"; 
 
-
-
 /* Custom CSS */
 
 @layer base {
+
+body {
+  font-family: "Red Hat Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
 
 h1 {
   @apply text-4xl;
@@ -23,17 +32,13 @@ h1, h2, h3, h4, h5, h6 {
 /* custom elements from here */
 
 .a-link, .a-link:link {
-  text-decoration: none;
-  background-position-y: -0%;
-  background-image: linear-gradient( rgba(255,255,255,0) 50%, rgba(3, 105, 161, 1) 50%);
-  transition: background 500ms ease;
-  background-size: 4px;
-  background-size: auto 175%;
+  background-image: linear-gradient( rgba(255,255,255,0) 53%, rgba(3, 105, 161, 1) 53%);
+	background-size: auto 175%;
+	transition: background .3s ease-in-out;
 }
 
 .a-link:hover {
   background-position-y: 100%; 
-  /*background-image: linear-gradient(rgba(3, 105, 161, 0.2) 10%, rgba(3, 105, 161, 0.4) 90%);*/
   @apply bg-gradient-to-t from-sky-200 to-sky-100;
   cursor: pointer;
 }
@@ -49,9 +54,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .suprose {
-  font-family: IBM Plex Plus, Arial, Helvetica, Verdana, sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5;
   @apply text-gray-600 dark:text-gray-200;
 }
 

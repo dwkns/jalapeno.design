@@ -5,7 +5,9 @@
     <!-- preconnect -->
     <link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="//res.cloundinary.com" crossorigin>    
-    {% include "seo.njk" %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">    {% include "seo.njk" %}
     <!-- styles -->
     <link rel="stylesheet" href="/assets/css/tailwind.css?v={% version %}"/>
     <!-- favicon -->
@@ -26,13 +28,14 @@
       </div>
 
       <!-- column divider -->
-      <div class=" w-[20px] order-2">
-        <div class="flex-none w-[20px] fixed bg-[url(/assets/images/optim.svg)] eleventy:ignore h-full dark:bg-[url(/assets/images/optim_dark.svg)] order-2"></div>       
+      <div class="w-[20px] order-2 hidden lg:block">
+        <div class="flex-none w-[20px] fixed bg-[url(/assets/images/optim.svg)] eleventy:ignore h-full dark:bg-[url(/assets/images/optim_dark.svg)] order-2"></div>
+        <div class="w-full h-96 {{ accent }} mt-20 block"></div>     
       </div>
 
       <!-- column mainbar -->
       <div class="w-lg basis-1/2 order-3">
-        <main role="main" class="w-full">
+        <main role="main" class="w-full pt-20">
     {% block content %}
       {{ content | safe }}
     {% endblock %}
@@ -45,6 +48,9 @@
       </div>
 
     </div>  
+
+    <!-- footer -->
+        {% include "footer.njk" %}
   </body>
 
 </html>

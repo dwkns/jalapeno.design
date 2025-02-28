@@ -6,7 +6,7 @@ author: jalapeno.design
 keywords: dfm
 tags: [design, engineering, consumer, portfolio]
 heading: Personal Fitness Equipment
-
+accent: bg-[#58a7e5]
 hero_image: /assets/images/normatec/normatec_hero_2000x1000.jpg
 
 slideshow: ["https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_LHS_1_690x450.jpg" , 

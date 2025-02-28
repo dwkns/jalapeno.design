@@ -21,11 +21,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLayoutsDirectory("_layouts");
 
   eleventyConfig.addPassthroughCopy("src/assets/images");
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
   
   eleventyConfig.addWatchTarget("src");
-
-  eleventyConfig.addGlobalData("siteName", "jalapeno.design");
 
   // read data from .env file to determine dev or prod
   eleventyConfig.addGlobalData("env", process.env.ELEVENTY_ENV);
@@ -54,6 +53,10 @@ module.exports = function (eleventyConfig) {
   // Shortcodes
   eleventyConfig.addShortcode('version', function () {
     return now
+  });
+
+  eleventyConfig.addShortcode('year', function () {
+    return new Date().getFullYear()
   });
 
   // Custom Split Filter

@@ -7,16 +7,13 @@ title: Contact
 <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 {% endblock %}
 
-{% block title %} {{ title }}{% endblock %}
-
 {% block content %}
 
-    <div class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
-      <img src="/assets/images/logo.svg" alt="Logo" class="h-12 mx-auto mb-4" eleventy:ignore>
-        <h1 class="text-center text-3xl font-bold mb-6">{{ siteName }}</h1>
-      <div class="prose mx-auto">
+    <div class="">
 
-      <p class="">
+      <div class="suprose border border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg pr-4 py-4">
+
+      <p class="suprose">
         {% if contactText %}
           {{ contactText | safe }}
         {% else %}
