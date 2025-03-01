@@ -5,6 +5,9 @@ tags:
     - consumer
     - rugged
 title: Dog Collar
+hero_image: /assets/images/spoton/TheCollar_Image1_Collar-3077895837.jpg
+accent: bg-[#648e37]
+heading: GPS Equipped Dog Collar
 ---
 
  <video width="240" height="320" controls>

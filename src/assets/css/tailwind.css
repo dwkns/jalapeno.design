@@ -41,7 +41,9 @@ h1, h2, h3, h4, h5, h6 {
   background-image: none;
 } 
 
-
+.external {
+  @apply after:content-['_↗'];
+}
 
 .indy-button {
   @apply text-white bg-sky-700 dark:bg-sky-500 hover:bg-sky-500 dark:hover:bg-sky-700;

@@ -1,35 +1,36 @@
 ---
 layout: default.njk
 ---
+
 <div class="">
+  <!-- hero image -->
   <header class="h-{{ iHeight}} relative">
     <img 
       src="{{ hero_image }}" 
       alt="{{ heading }}" 
-      class="w-full h-{{ iHeight }} rounded-r-lg" />
+      class="w-auto h-{{ iHeight }} rounded-r-lg aspect-auto ">
     <div class="inset-0 flex ml-4 mb-4 items-end top-12 absolute">
       <h1 class="text-white font-bold bg-black/40 p-2 rounded-sm backdrop-blur-xs">{{ heading }}</h1>
     </div>
   </header>
 
   <!-- main content -->
-  <main>
-    <div class="pt-4 px-4 suprose">
+  <main role="main">
+    <div class="grid grid-cols-12 gap-4">
 
-  {{ content | safe }}
+    <div class="pt-4 pl-4 suprose col-span-9 list-style-disc">
+      {{ content | safe }}
 
-    <div class="h-48">
-      <h2>Related Projects</h2>
-    </div>  
-
+      <div class="h-48">
+        <h2>Related Projects</h2>
+      </div>  
     </div>
+
       <!-- column sidebar-r -->
-      <div class="w-[200px] order-4 bg-blue-100">
+      <div class="col-span-3">
         {% include "sidebar-r.njk" %}
       </div>
-
+    </div>
   </main>
 </div>
-
-
 
