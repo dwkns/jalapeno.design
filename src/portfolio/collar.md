@@ -5,7 +5,8 @@ tags:
     - consumer
     - rugged
 title: Dog Collar
-hero_image: /assets/images/spoton/TheCollar_Image1_Collar-3077895837.jpg
+description: The first GPS and cellular equipped dog collar with in-built static correction.
+hero_image: /assets/images/spoton/spoton_hero.jpg
 accent: bg-[#648e37]
 heading: GPS Equipped Dog Collar
 ---

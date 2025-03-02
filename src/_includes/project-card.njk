@@ -1,17 +1,19 @@
  <!-- project-card start -->
- <div class="rounded overflow-hidden shadow-lg mb-4">
-  <a href="{{ post.url}}">
+ <a href="{{ post.url}}">
+ <div class="card w-full shadow-lg mb-4 dark:bg-gray-800">
+  <figure>
   <img class="w-full " src="{{ post.data.hero_image }}" alt="{{ post.data.title}}">
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">{{ post.data.title }}</div>
-    <p class="text-gray-700 text-base">
+  </figure>
+  <div class="card-body">
+    <div class="card-title">{{ post.data.title }}</div>
+    <p class="text-gray-700 dark:text-gray-200">
         {{ post.data.description }}
     </p>
     <p class="text-xs">
       Reading Time: {{ post.content | timeToRead }} 
     </p>
 
-  <div class="px-6 pt-4 pb-2">
+  <div class="card-actions justify-end">
     {% for tag in post.data.tags %}
     {% if tag != "portfolio" %}
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700 mr-2 mb-2">
@@ -21,7 +23,7 @@
     {% endfor %}
   </div>
   </div>
-  </a>
 
 </div>
+</a>
 <!-- project-card end -->
