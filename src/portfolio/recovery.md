@@ -8,11 +8,27 @@ tags: [design, engineering, consumer, portfolio]
 heading: Personal Fitness Equipment
 accent: bg-[#58a7e5]
 hero_image: /assets/images/normatec/normatec_hero_2000x1000.jpg
-
-slideshow: ["https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_LHS_1_690x450.jpg" , 
-  "https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_Process_5_450x355.jpg",
-  "https://res.cloudinary.com/dqvadtc7k/image/upload/v1740521801/IMG_2296_va1cty.jpg",
-  "https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_Process_7_450x355.jpg"]
+slideshow: |
+  [                
+        {
+            imgSrc: 'https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_LHS_1_690x450.jpg',
+            imgAlt: '',  
+            title: 'Fat Bottomed Girls',
+            description: 'The architects of the digital world, constantly battling against their mortal enemy – browser compatibility.',              
+        },                
+        {                    
+            imgSrc: 'https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_Process_5_450x355.jpg',                    
+            imgAlt: '',  
+            title: 'Radio Ga,ga',
+            description: 'Because not all superheroes wear capes, some wear headphones and stare at terminal screens',              
+        },                
+        {                    
+            imgSrc: 'https://res.cloudinary.com/dqvadtc7k/image/upload/v1740521801/IMG_2296_va1cty.jpg',                    
+            imgAlt: '',    
+            title: 'Flash',
+            description: 'Where &quot;burnout&quot; is just a fancy term for &quot;Tuesday&quot;.'             
+        },
+    ]
 ---
 
 ## Background
@@ -32,7 +48,7 @@ slideshow: ["https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_LHS_1
 
 {% if slideshow %}
 ## Slideshow
-{% include "swiper.njk" %}
+{% include "carousel.njk" %}
 {% endif %}
 
 ## Solution
