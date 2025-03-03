@@ -7,10 +7,10 @@
     <div class="mb-2">
       <h3 class="">Table of Contents:</h3>
       <ul class="list-disc list-inside text-sm">
-        <li><a href="#background" class="a-link">Background</a></li>
-        <li><a href="#problem" class="a-link">Problem</a></li>
-        <li><a href="#slideshow" class="a-link">Slideshow</a></li>
-        <li><a href="#solution" class="a-link">Solution</a></li>
+{% for heading in headings %}
+        <li><a href="#{{ heading }}" class="a-link capitalize">{{ heading }}</a></li>
+{% endfor %}
+
       </ul>
     </div>
 

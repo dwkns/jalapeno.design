@@ -13,22 +13,28 @@ slideshow: |
         {
             imgSrc: 'https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_LHS_1_690x450.jpg',
             imgAlt: '',  
-            title: 'Fat Bottomed Girls',
+            title: '',
             description: 'The architects of the digital world, constantly battling against their mortal enemy – browser compatibility.',              
         },                
         {                    
             imgSrc: 'https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_Process_5_450x355.jpg',                    
             imgAlt: '',  
-            title: 'Radio Ga,ga',
+            title: '',
             description: 'Because not all superheroes wear capes, some wear headphones and stare at terminal screens',              
         },                
         {                    
             imgSrc: 'https://res.cloudinary.com/dqvadtc7k/image/upload/v1740521801/IMG_2296_va1cty.jpg',                    
             imgAlt: '',    
-            title: 'Flash',
+            title: '',
             description: 'Where &quot;burnout&quot; is just a fancy term for &quot;Tuesday&quot;.'             
         },
     ]
+headings:
+  - background
+  - problem
+  - slideshow
+  - solution
+  - related
 ---
 
 ## Background
@@ -58,3 +64,5 @@ slideshow: |
   Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.
 
   Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellentesque ipsum. Nulla non arcu lacinia neque faucibus fringilla. Morbi sit amet mauris. Fusce aliquam nunc vitae purus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus libero mauris, aliquam eu, accumsan sed, facilisis vitae, orci. Phasellus dapibus semper urna. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus.
+
+## Related
