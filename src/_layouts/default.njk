@@ -8,19 +8,16 @@ iHeight: 140
     <!-- preconnect -->
     <link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="//res.cloundinary.com" crossorigin>    
-    <!-- preconnect for inter font -->
     <link rel="preconnect" href="https://rsms.com" crossorigin>
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    {% include "seo.njk" %}    
     <!-- styles -->
     <link rel="stylesheet" href="/assets/css/tailwind.css?v={% version %}"/>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <!-- favicon -->
     <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml"/>
-    <!-- Slideshow: https://pagedone.io/docs/carousel-->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    {% block head %}{% endblock %}
     <!--
     =============================
-    variables:
       site.name: {{ site.name }}
       site.url: {{ site.url }}
       title: {{ title}}
