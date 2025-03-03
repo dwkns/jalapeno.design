@@ -17,6 +17,17 @@ iHeight: 140
     <!-- Slideshow: https://pagedone.io/docs/carousel-->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     {% block head %}{% endblock %}
+    <!--
+    =============================
+    variables:
+      site.name: {{ site.name }}
+      site.url: {{ site.url }}
+      title: {{ title}}
+      accent: {{ accent }}
+      iHeight: {{ iHeight }}
+      build: {{ buildInfo.hash }}
+    ==============================
+    -->
   </head>
 
   <body class="bg-white dark:bg-gray-900 text-black dark:text-white">{% include "tw_size.njk" %}
