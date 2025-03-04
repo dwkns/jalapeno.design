@@ -2,155 +2,115 @@
 layout: default.njk
 title: Contact
 ---
+<!-- https://scriptbinary.com/alpinejs/dynamic-form-validation-using-alpinejs#example-dynamic-form-validation -->
+  <div class="suprose border border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg px-4 min-h-{{ iHeight }}">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Let's Talk</h1>
+      <p class="mt-3">
+        Have some big idea to develop and need help? Then reach out I'd love to
+        hear about your project and provide help.
+      </p>
 
-    <div class="">
-
-      <div class="suprose border border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg pr-4 py-4">
-
-      <div class="">
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Let's Talk</h1>
-        <p class="mt-3 text-lg">Interested in how we can work together to launch your product?</p>
+    <div class="flex">
+      <div class="w-1/2 border-r-2 border-gray-200 dark:border-gray-700 pr-4">
+        <h2 class="text-2xl font-bold tracking-tight">Contact Information</h2>
+        <p class="mt-3">
+          Feel free to reach out to me via email or phone. I'm always open to
+          discussing new projects, creative ideas, or opportunities to be part
+          of your visions.
+        </p>
+        Tel: <a href="tel:(978) 255-3009">(978) 255-3009</a>
       </div>
-      <div class="">
-            <!-- form start -->
-            <form 
-              action="https://formspree.io/f/meoenqye" 
-              method="POST" 
-              class=""
-              >
-<div class="grid grid-cols-3">              <!-- name input -->
-              <div class="bg-red-100">a</div>
-              <div class="col-span-2 bg-blue-100">b</div>
-              <div class="bg-red-100">a</div>
-              <div class="col-span-2 bg-blue-100">b</div>              <div class="bg-red-100">a</div>
-              <div class="col-span-2 bg-blue-100">b</div>              <div class="bg-red-100">a</div>
-              <div class="col-span-2 bg-blue-100">b</div>
+      <div class="w-1/2">
+        <!-- form start -->
+        <form action="https://formspree.io/f/meoenqye" method="POST" class="">
+          <!-- name input -->
+          <div class="grid grid-cols-3 gap-4">
+            <div class="text-right px-2 content-center">
+              <label for="name" class="text-sm"> name: </label>
+            </div>
+            <div class="col-span-2">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="border border-gray-300 rounded p-1 w-full"
+                placeholder="Name"
+                required
+              />
+            </div>
 
-
-        </div>
-
-
-                  <label 
-                    for="name" 
-                    class="">
-                    Your name
-                  </label>
-                </div>
-                
-                  <input 
-                    type="text" 
-                    name="name" 
-                    id="name" 
-                    class="border border-gray-500 rounded p-1" 
-                    placeholder=" " 
-                    required />
-              </div>
-              </div>
-
-              <!-- email input -->
-              <div class="relative z-0 w-full mb-5">
-                  <input 
-                    type="email" 
-                    name="email" 
-                    id="floating_email"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
-                    placeholder=" " 
-                    required />
-                  <label 
-                    for="floating_email" 
-                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                    Email address
-                  </label>
-              </div>
-
-              <!-- phone input -->
-              <div class="relative z-0 w-full mb-5">
-                  <input 
-                    type="tel" 
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-                    name="phone (123-456-7890)"  
-                    id="floating_phone" 
-                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
-                    placeholder=" " 
-                    required />
-                  <label 
-                    for="floating_phone" 
-                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                    Phone number  
-                  </label>
-              </div>
-
-<div class="flex justify-start" x-data>
-    <div class="mb-3 w-96">
-      <label for="exampleText0" class="form-label inline-block mb-2">Phone Input</label>
-      <input x-mask="(999) 999-9999" placeholder="(999) 999-9999" type="text" class="
-        form-control
-        block
-        w-full
-        px-3
-        py-1.5
-        text-base
-        font-normal
-        text-gray-700
-        bg-white bg-clip-padding
-        border border-solid border-gray-300
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-      " />
-    </div>
-  </div>
-
-              <!-- company input -->
-              <div class="relative z-0 w-full mb-5">
-                <input 
-                  type="text" 
-                  name="company" 
-                  id="floating_company" 
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
-                  placeholder=" " 
-                  required />
-                <label 
-                  for="floating_company" 
-                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                  Company
-                </label>
-              </div>
-  
-
-
-              <!-- message input -->
-              <div class="relative z-0 w-full mb-5">
-
-                <label 
-                  for="message"
-                  class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 scale-75 top-3 origin-[0]">
-                  Additional details
-                  </label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black" 
-                    rows="2">
-                  </textarea>
-                  </div>
-              <!-- message input end -->
-
-            <div class="block">
+            <!-- email input -->
+            <div class="text-right px-2 content-center">
+              <label for="email" class="text-sm"> email: </label>
+            </div>
+            <div class="col-span-2">
+              <input
+                type="text"
+                name="email"
+                id="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                class="border border-gray-300 rounded p-1 w-full"
+                placeholder="email"
+                required
+              />
+            </div>
+            <!-- phone input -->
+            <div class="text-right px-2 content-center">
+              <label for="phone" class="text-sm"> phone: </label>
+            </div>
+            <div class="col-span-2" x-data>
+              <input
+                type="tel"
+                x-mask="(999) 999-9999"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                name="phone"
+                id="phone"
+                class="border border-gray-300 rounded p-1 w-full"
+                placeholder="123-456-7890"
+              />
+            </div>
+            <!-- company input -->
+            <div class="text-right px-2 content-center">
+              <label for="company" class="text-sm"> company: </label>
+            </div>
+            <div class="col-span-2">
+              <input
+                type="text"
+                name="company"
+                id="floating_company"
+                class="border border-gray-300 rounded p-1 w-full"
+                placeholder="Company"
+                required
+              />
+            </div>
+            <!-- message input -->
+            <div class="text-right px-2 content-center">
+              <label for="message" class="text-sm"> message: </label>
+            </div>
+            <div class="col-span-2">
+              <textarea
+                name="message"
+                id="message"
+                class="border border-gray-300 rounded p-1 w-full"
+                placeholder=""
+                required
+                rows="4"
+              ></textarea>
+            </div>
+            <!-- message input end -->
+            <div class="col-start-2 pb-4">
               <div class="mt-2">
-          <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-
+                <button
+                  type="submit"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Submit
+                </button>
               </div>
             </div>
-          </form>
-          <!-- form end -->
-
-        </div>
-      </div>
-    </p>
-
+          </div>
+        </form>
+        <!-- form end -->
       </div>
     </div>
+</div>
