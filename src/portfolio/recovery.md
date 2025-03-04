@@ -9,25 +9,25 @@ heading: Personal Fitness Equipment
 accent: bg-[#58a7e5]
 hero_image: /assets/images/normatec/normatec_hero_2000x1000.jpg
 slideshow: |
-  [                
+  [     
+        {                    
+            imgSrc: 'https://res.cloudinary.com/dqvadtc7k/image/upload/v1740521801/IMG_2296_va1cty.jpg',                    
+            imgAlt: '',    
+            title: '',
+            description: 'Making foam sketch models on the CNC mill.'             
+        },           
         {
             imgSrc: 'https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_LHS_1_690x450.jpg',
             imgAlt: '',  
             title: '',
-            description: 'The architects of the digital world, constantly battling against their mortal enemy – browser compatibility.',              
+            description: 'Blender rendering of final concept.',              
         },                
         {                    
             imgSrc: 'https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_Process_5_450x355.jpg',                    
             imgAlt: '',  
             title: '',
-            description: 'Because not all superheroes wear capes, some wear headphones and stare at terminal screens',              
+            description: 'Blender rendering with wall mount.',              
         },                
-        {                    
-            imgSrc: 'https://res.cloudinary.com/dqvadtc7k/image/upload/v1740521801/IMG_2296_va1cty.jpg',                    
-            imgAlt: '',    
-            title: '',
-            description: 'Where &quot;burnout&quot; is just a fancy term for &quot;Tuesday&quot;.'             
-        },
     ]
 headings:
   - background

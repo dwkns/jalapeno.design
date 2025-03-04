@@ -17,12 +17,12 @@ layout: default.njk
   <main role="main">
     <div class="grid grid-cols-12 gap-4">
 
-    <div class="pt-4 pl-4 suprose col-span-9 list-style-disc">
+    <div class="pt-4 pl-4 suprose col-span-9 list-style-disc print:col-span-12">
       {{ content | safe }}
     </div>
 
       <!-- column sidebar-r -->
-      <div class="col-span-3">
+      <div class="col-span-3 print:hidden">
         {% include "sidebar-r.njk" %}
       </div>
     </div>
