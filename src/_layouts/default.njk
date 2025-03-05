@@ -34,9 +34,7 @@ iHeight: 140
     <div class="md:flex max-w-7xl min-h-screen mx-auto">
 
       <!-- column sidebar-l -->
-      <div class="w-[200px] flex-none print:hidden">
         {% include "sidebar-l.njk" %}
-      </div>
 
       <!-- column divider -->
       <div class="w-[20px] hidden lg:block flex-none print:hidden">
@@ -45,8 +43,8 @@ iHeight: 140
       </div>
 
       <!-- column mainbar -->
-      <div class="w-full lg:w-[calc(100%-220px)] border border-t-0 border-b-0 border-l-0 border-r-2 border-gray-200 dark:border-gray-800">
-        <main class="w-full pt-20 pr-4">
+      <div class="w-full lg:w-[calc(100%-220px)] md:border-2 border-t-0 border-b-0 border-l-0 border-r-2 border-gray-200 dark:border-gray-800">
+        <main class="w-full md:pt-20 md:pr-4">
     {% block content %}
       {{ content | safe }}
     {% endblock %}

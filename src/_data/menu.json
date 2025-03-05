@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Portfolio",
+        "url": "/portfolio/"
+    },
+    {
+        "name": "Patents",
+        "url": "/patents/"
+    },
+    {
+        "name": "Skills",
+        "url": "/skills/"
+    },
+    {
+        "name": "About",
+        "url": "/about/"
+    },
+    {
+        "name": "Contact",
+        "url": "/contact/"
+    }
+]

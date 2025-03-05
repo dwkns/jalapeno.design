@@ -1,43 +1,68 @@
 ---
 layout: default.njk
 title: Home
-description: Design Engineer with over 30 years experience, specializing in the development of medical devices and medical equipment.
-keywords: design engineer, medical devices, medical equipment, product development, SolidWorks, CAD, prototyping
-author: Jalapeno Design
+hero_image: /assets/images/main_hero.jpg
+heading: Jalapeno Design
 ---
 
+<div class="">
+  <!-- hero image -->
+  <header class="h-{{ iHeight }} relative">
+    <img
+      src="{{ hero_image }}"
+      alt="{{ heading }}"
+      class="w-auto h-{{ iHeight }} rounded-r-lg aspect-auto "
+    />
+    <div class="inset-0 flex ml-4 mb-4 items-end top-12 absolute">
+      <h1
+        class="text-white font-bold bg-black/40 p-2 rounded-sm backdrop-blur-xs"
+      >
+        {{ heading }}
+      </h1>
+    </div>
+  </header>
+  <div class="flex flex-col md:flex-row">
+    <div class="suprose p-4 min-h-140 prose suprose flex-none">
+      <p>
+        I am a Design Engineer with over 30 years experience, specializing in
+        the development of medical devices and medical equipment. I have worked
+        for design consultancies in the UK and USA, with clients ranging from
+        individual inventors to international corporations. As well as medical
+        devices, I have worked on domestic appliances, office furniture, and
+        ruggedized equipment.
+      </p>
 
-      <div class="suprose border border-2 border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg pr-4 py-4 min-h-140">
-        <p>
-          I am a Design Engineer with over 30 years experience, specializing in the development of medical devices and medical 
-          equipment. I have worked for design consultancies in the UK and USA, with clients ranging from individual inventors
-          to international corporations. As well as medical devices, I have worked on domestic appliances, office furniture, and 
-          ruggedized equipment.
-        </p>
+      <p>
+        I have a strong understanding of manufacturing processes, materials, and
+        product development methodologies. As well as over 25 years experience
+        using SolidWorks, and I have used other CAD packages such as AutoCAD,
+        OnShape, and Fusion 360.
+      </p>
 
-        <p>
-          I have a strong understanding of manufacturing processes, materials, and product development methodologies. 
-          As well as over 25 years experience using SolidWorks, and I have used other CAD packages such as AutoCAD, 
-          OnShape, and Fusion 360.
-        </p>
+      <p>
+        I am a creative problem solver, and have a keen eye for detail. I am a
+        team player, but also am to work independently. I am always looking for
+        new challenges, and am excited to work on projects that make a
+        difference in people's lives.
+      </p>
 
-        <p>
-          I am a creative problem solver, and have a keen eye for detail. I am a team player, but also am to work independently.
-          I am always looking for new challenges, and am excited to work on projects that make a difference in people's lives.
-        </p>
+      <p>
+        I have a well equiped home office located in the Eastern Time Zone of
+        the USA (New Hampshire) with on-site prototyping equipment (FDM and
+        SLA).
+      </p>
 
-        <p>
-          I have a well equiped home office located in the Eastern Time Zone of the USA (New Hampshire) with on-site prototyping
-          equipment (FDM and SLA).
-        </p>
+      <p>
+        If you are looking for a talented and experienced design engineer to
+        help you with your next project, please contact me. I would be happy to
+        discuss your needs and see how I can help you achieve your goals.
+      </p>
 
-        <p>
-          If you are looking for a talented and experienced design engineer to help you with your next project, 
-          please contact me. I would be happy to discuss your needs and see how I can help you achieve your goals.
-        </p>
-
-        <p>
-          <a href="/contact" class="a-link">Contact me</a> to discuss how I can help your next project.
-        </p>
-      </div>
-
+      <p>
+        <a href="/contact" class="a-link">Contact me</a> to discuss how I can
+        help your next project.
+      </p>
+    </div>
+    <div class="flex-1 block"></div>
+  </div>
+</div>
