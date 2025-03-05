@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography"; /* https://github.com/tailwindlabs/tailwindcss-typography */
-@plugin "daisyui"; 
+@plugin "daisyui"{
+  themes: light --default, dim --prefersdark;
+}
 
 extend: {
   screens: {
@@ -26,7 +28,7 @@ h2 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-sky-700 dark:text-sky-300 py-2;
+  @apply py-2;
 }
 
 /* custom elements from here */
@@ -52,43 +54,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .indy-button {
-  @apply text-white bg-sky-700 dark:bg-sky-500 hover:bg-sky-500 dark:hover:bg-sky-700;
+  @apply text-primary-content bg-primary hover:bg-primary/70;
 }
 
 .suprose {
-  @apply text-gray-600 dark:text-gray-200;
+  @apply text-base-content;
 }
 
 .suprose p {
   @apply mb-8;
 }
-
- .swiper-container {
-  width:100%;
-  @apply h-96;
-  }
-
-.swiper-wrapper {
-  width: 100%;
-  height: max-content !important;
-  padding-bottom: 32px !important;
-  -webkit-transition-timing-function: linear !important;
-  transition-timing-function: linear !important;
-  position: relative;
-  }
-
-  .swiper-pagination-bullet {
-  background: #4f46e5;
-  }
-
-  .swiper-slide {
-  width:auto;
-  height:auto;
-  }
-  .swiper-container img {
-  height:auto;
-  @apply h-88 object-contain;
-  }  
 
 }
 

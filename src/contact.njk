@@ -3,9 +3,9 @@ layout: default.njk
 title: Contact
 ---
 <!-- https://scriptbinary.com/alpinejs/dynamic-form-validation-using-alpinejs#example-dynamic-form-validation -->
-  <div class="suprose border border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg px-4 min-h-{{ iHeight }}">
-      <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Let's Talk</h1>
-      <p class="mt-3">
+  <div class="suprose border border-2 border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg px-4 min-h-{{ iHeight }}">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-center">Let's Talk</h1>
+      <p class="mt-3 text-center">
         Have some big idea to develop and need help? Then reach out I'd love to
         hear about your project and provide help.
       </p>
@@ -14,11 +14,30 @@ title: Contact
       <div class="w-1/2 border-r-2 border-gray-200 dark:border-gray-700 pr-4">
         <h2 class="text-2xl font-bold tracking-tight">Contact Information</h2>
         <p class="mt-3">
-          Feel free to reach out to me via email or phone. I'm always open to
+          Feel free to contact me via email or phone. I'm always open to
           discussing new projects, creative ideas, or opportunities to be part
           of your visions.
         </p>
-        Tel: <a href="tel:(978) 255-3009">(978) 255-3009</a>
+        <div class="w-2/3 mt-3 grid grid-cols-3 gap-2 bg-base-200 p-2 rounded-lg mx-auto border border-gray-200 dark:border-gray-700">
+          <div class="flex justify-end">
+            <img src="/assets/images/email-address-svgrepo-com.svg" alt="email icon" class="h-6 w-6" />
+          </div>
+          <div class="col-span-2">
+            <a href="mailto:{{ site.email }}" class="text-base-content hover:underline">
+              {{ site.email }}
+            </a>
+          </div>
+          <div class="flex justify-end">
+            <img src="/assets/images/phone-rotary-svgrepo-com.svg" alt="phone icon" class="h-6 w-6" />
+          </div>
+          <div class="col-span-2">
+            <a href="tel:{{ site.phone }}" class="text-base-content hover:underline">
+              {{ site.phone }}
+            </a>
+          </div>
+        </div>
+      <div class="w-2/3 mt-4 m-auto">Or fill out the form on the right and I will get back to you as soon as possible.</div>
+
       </div>
       <div class="w-1/2">
         <!-- form start -->
@@ -61,7 +80,7 @@ title: Contact
             <div class="col-span-2" x-data>
               <input
                 type="tel"
-                x-mask="(999) 999-9999"
+                x-mask="999-999-9999"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 name="phone"
                 id="phone"
@@ -102,7 +121,7 @@ title: Contact
               <div class="mt-2">
                 <button
                   type="submit"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  class="indy-button font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
                 >
                   Submit
                 </button>
