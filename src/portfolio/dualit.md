@@ -9,6 +9,7 @@ tags:
   - portfolio
   - home
   - consumer
+  - dfm
 slideshow: |
   [     
         {                    

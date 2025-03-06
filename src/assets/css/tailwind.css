@@ -2,9 +2,22 @@
 @plugin "@tailwindcss/typography"; /* https://github.com/tailwindlabs/tailwindcss-typography */
 @plugin "daisyui"{
   themes: light --default, business --prefersdark;
-
-  
 }
+
+/* https://daisyui.com/theme-generator/ */
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+
+  --color-primary: oklch(50% 0.134 242.749);
+  --color-primary-content: oklch(100% 0 0);
+
+  --color-accent: oklch(64% 0.222 41.116);
+  --color-accent-content: oklch(100% 0 0);
+
+  ---depth: 1;
+}
+
 
 extend: {
   screens: {
@@ -30,7 +43,8 @@ h2 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply py-2;
+  @apply py-2 text-primary;
+  font-weight: 300;
 }
 
 /* custom elements from here */
