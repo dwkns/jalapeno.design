@@ -4,7 +4,11 @@
   themes: light --default, business --prefersdark;
 }
 
-/* https://daisyui.com/theme-generator/ */
+/* 
+https://daisyui.com/theme-generator/
+https://dequeuniversity.com/rules/axe/4.10/color-contrast
+*/
+
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
@@ -12,8 +16,8 @@
   --color-primary: oklch(50% 0.134 242.749);
   --color-primary-content: oklch(100% 0 0);
 
-  --color-accent: oklch(64% 0.222 41.116);
-  --color-accent-content: oklch(100% 0 0);
+  --color-accent: oklch(69.78% 0.1974 45.4);
+  --color-accent-content: oklch(0% 0 0);
 
   ---depth: 1;
 }
