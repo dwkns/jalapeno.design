@@ -1,59 +1,70 @@
 <!-- side navigation -->
+{% set currentUrl = page.url %} 
+{% set urlParts = currentUrl | split('/') %} 
+{%set lastPart = urlParts[1] %}
+{% set lastPart = lastPart %}
 
-  <div class="w-[200px] flex-none print:hidden hidden md:block">
-    <aside class="w-full flex items-center pl-4 pr-0 pt-20 pb-3 md:min-h-full">
-      <div class="flex-auto basis-1/2 top-0 mx-auto self-start sticky">
-        <div
-          class="w-full border-2 border-r-0 border-gray-200 dark:border-gray-700 rounded-bl-lg rounded-tl-lg h-{{
-            iHeight
-          }} content-center"
-        >
-          <div class="">
-            <div class="p-4 grid justify-end">
-              <a href="/">
-                <img
-                  src="/assets/images/logo.svg"
-                  eleventy:ignore
-                  alt="Logo that looks like a small chilli pepper"
-                  class="h-8 mx-auto mb-4"
-                  width="{{ 8 * 4 }}"
-                />
-              </a>
-            </div>
-            <div class="pl-4">
-              <div class="nav flex flex-col overflow-hidden sidebar pb-2">
-                <!-- Navigation -->
-                <ul class="flex flex-col gap-2 text-right mr-4 suprose">
-                  {% for item in menu %}
-                  <li>
-                    <a href="{{ item.url }}" class="a-link">{{ item.name }}</a>
-                  </li>
-                  {% endfor %}
-                </ul>
-              </div>
+<div class="w-[200px] flex-none print:hidden hidden md:block">
+  <aside class="w-full flex items-center pl-4 pr-0 pt-20 pb-3 md:min-h-full">
+    <div class="flex-auto basis-1/2 top-0 mx-auto self-start sticky">
+      <div
+        class="w-full border-2 border-r-0 border-gray-200 dark:border-gray-700 rounded-bl-lg rounded-tl-lg h-{{
+          iHeight
+        }} content-center"
+      >
+        <div class="">
+          <div class="p-4 grid justify-end">
+            <a href="/">
+              <img
+                src="/assets/images/logo.svg"
+                eleventy:ignore
+                alt="Logo that looks like a small chilli pepper"
+                class="h-8 mx-auto mb-4"
+                width="{{ 8 * 4 }}"
+              />
+            </a>
+          </div>
+          <div class="pl-4">
+            <div class="nav flex flex-col overflow-hidden sidebar pb-2">
+              <!-- Navigation -->
+              <ul class="flex flex-col gap-2 text-right mr-4 suprose">
+                {% for item in menu %}
+                {% set urlParts = item.url | split('/') %}
+                {% if urlParts[1] == lastPart %} 
+                <li class="text-primary">          
+                  {{ item.name }}
+                </li>
+                {% else %}
+                <li>
+                  <a href="{{ item.url }}" class="a-link">{{ item.name }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </aside>
-  </div>
+    </div>
+  </aside>
+</div>
 
 <div class="md:hidden w-full">
-      <ul class="menu menu-horizontal rounded-box m-2">
-        <a href="/">
-          <img
-            src="/assets/images/logo.svg"
-            eleventy:ignore
-            alt="Logo that looks like a small chilli pepper"
-            class="h-8 mx-auto"
-            width="{{ 8 * 4 }}"
-          />
-        </a>
-        {% for item in menu %}
-        <li class="p-2">
-          <a href="{{ item.url }}" class="">{{ item.name }}</a>
-        </li>
-        {% endfor %}
-      </ul>
+  <ul class="menu menu-horizontal rounded-box m-2">
+    <a href="/">
+      <img
+        src="/assets/images/logo.svg"
+        eleventy:ignore
+        alt="Logo that looks like a small chilli pepper"
+        class="h-8 mx-auto"
+        width="{{ 8 * 4 }}"
+      />
+    </a>
+    {% for item in menu %}
+    <li class="p-2">
+      <a href="{{ item.url }}" class="">{{ item.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
 <!-- End: src/_includes/sidebar-l.njk -->

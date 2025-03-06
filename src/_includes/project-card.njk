@@ -1,31 +1,31 @@
 <!-- project-card start -->
-<div class="card w-full shadow-lg mb-4 rounded-md">
-  <a href="{{ post.url}}">
-    <figure>
-      <img class="w-full " src="{{ post.data.hero_image }}" alt="{{ post.data.title}}" class="rounded-t-md">
-    </figure>
+<div class="card w-full shadow-md hover:shadow-lg mb-4 rounded-md border border-base-100 hover:border-base-200">
+  <a href="{{ post.url }}">
+    <div class="w-full p-2">
+      <img
+        class=""
+        src="{{ post.data.hero_image }}"
+        alt="{{ post.data.title }}"
+        class=""
+      />
+    </div>
   </a>
   <div class="card-body">
     <div class="card-title text-primary">{{ post.data.title }}</div>
     <p class="">
       {{ post.data.description }}
     </p>
-    <p class="text-xs">
-      Reading Time: {{ post.content | timeToRead }}
-    </p>
+    <p class="text-xs">Reading Time: {{ post.content | timeToRead }}</p>
     <div class="card-actions justify-end">
-      {% for tag in post.data.tags %}
-        {% if tag != "portfolio" %}
-          <a href="/tags/{{ tag | slug }}/" class="">
-            <span class="btn btn-sm btn-primary">
-              {{ tag }}
-            </span>
-          </a>
-        {% endif %}
-      {% endfor %}
+      {% for tag in post.data.tags %} {% if tag != "portfolio" %}
+      <a href="/tags/{{ tag | slug }}/" class="">
+        <span class="btn btn-sm btn-primary">
+          {{ tag }}
+        </span>
+      </a>
+      {% endif %} {% endfor %}
     </div>
   </div>
-
 </div>
 
 <!-- project-card end -->

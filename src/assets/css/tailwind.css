@@ -22,7 +22,6 @@ https://dequeuniversity.com/rules/axe/4.10/color-contrast
   ---depth: 1;
 }
 
-
 extend: {
   screens: {
     print: { raw: 'print' }
@@ -32,12 +31,10 @@ extend: {
 /* Custom CSS */
 
 @layer base {
-
   @theme {
     --font-sans: InterVariable, sans-serif; /* https://tailwindui.com/documentation#add-the-inter-font-family */
   }
   
-
 h1 {
   @apply text-4xl;
 }
@@ -50,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   @apply py-2 text-primary;
   font-weight: 300;
 }
+
 
 /* custom elements from here */
 
@@ -86,5 +84,3 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 }
-
-
