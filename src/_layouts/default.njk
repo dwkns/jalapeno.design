@@ -43,7 +43,7 @@ iHeight: 140
       </div>
 
       <!-- column mainbar -->
-      <div class="w-full lg:w-[calc(100%-220px)] md:border-2 border-t-0 border-b-0 border-l-0 border-r-2 border-gray-200 dark:border-gray-800">
+      <div class="w-full lg:w-[calc(100%-220px)]">
         <main class="w-full md:pt-20 md:pr-4">
     {% block content %}
       {{ content | safe }}
@@ -53,6 +53,7 @@ iHeight: 140
 
     </div>  
     <!-- footer -->
+    {% include "cookie.njk" %}
     {% include "footer.njk" %}                       
     {% include "tw_size.njk" %}                                                                                                                                                      
   </body>

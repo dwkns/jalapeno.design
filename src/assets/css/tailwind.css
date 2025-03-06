@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography"; /* https://github.com/tailwindlabs/tailwindcss-typography */
 @plugin "daisyui"{
-  themes: light --default, dim --prefersdark;
+  themes: light --default, business --prefersdark;
+
+  
 }
 
 extend: {
