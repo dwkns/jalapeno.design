@@ -24,9 +24,13 @@ heading: Jalapeno Design
     </div>
   </header>
 
-  <div class="grid grid-cols-2 py-4">
-    <div class="pl-4 mr-2 text-xl aspect-square">
-      <p class="mb-4">
+  <div class="w-full p-4">
+    <h1>Hello</h1>
+  </div>
+
+  <div class="grid grid-cols-2 gap-8">
+    <div class="px-4 mr-2aspect-square">
+      <p class="mb-4 text-xl ">
         I am a Design Engineer with over 35 years experience, specializing in
         the design and development of medical devices and medical equipment.
       </p>
@@ -49,14 +53,17 @@ heading: Jalapeno Design
       </p>
     </div>
 
-    <div class="ml-2 aspect-square items-center relative p-2 rounded-lg">
+ 
+
+    <div class="ml-2 aspect-square items-center relative p-8">
+      <div class="pl-4 border-2 border-base-300 block w-full h-full rounded-lg">
       {% for item in grid %}
         <div class="size-60 absolute {{ item.pos }} z-0 hover:z-100">
           <a href="{{ item.link }}" class="block w-full h-full">
             <img 
               src="{{ item.imgSrc }}" 
               alt="{{ item.imgAlt }}" 
-              class="rounded-lg w-full h-full object-cover brightness-80 transform transition-transform duration-500 hover:scale-105 hover:brightness-100" />
+              class="rounded-lg w-full h-full object-cover brightness-80 transform transition-transform duration-500 hover:scale-105 hover:brightness-100 shadow-md " />
             </a>
         </div>
         {% endfor %}
@@ -66,5 +73,6 @@ heading: Jalapeno Design
           </button>
         </div>
       </div>
+    </div>
   </div>
 </div>
