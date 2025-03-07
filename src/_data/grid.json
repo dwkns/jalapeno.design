@@ -1,0 +1,20 @@
+[
+  {
+    "imgSrc": "/assets/images/normatec/normatec-glamour.png",
+    "imgAlt": "Normatec glamour shot",
+    "pos": "top-0 right-0",
+    "link": "/portfolio/recovery/"
+  },
+  {
+    "imgSrc": "/assets/images/teleflex/Teleflex_Process_6_450x355.jpg",
+    "imgAlt": "Teleflex Process 6",
+    "pos": "inset-x-0 inset-y-0 mx-auto my-auto",
+    "link": "/portfolio/iabp-cart/"
+  },
+  {
+    "imgSrc": "/assets/images/spoton/spt-21-001-tps-jan-lead-1611082992.jpg",
+    "imgAlt": "SpotOn",
+    "pos": "bottom-0 left-0",
+    "link": "/portfolio/collar/"
+  }
+]

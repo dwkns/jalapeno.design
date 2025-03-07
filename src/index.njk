@@ -25,22 +25,46 @@ heading: Jalapeno Design
   </header>
 
   <div class="grid grid-cols-2 py-4">
-    <div class="block pl-4 mr-2">
+    <div class="pl-4 mr-2 text-xl aspect-square">
       <p class="mb-4">
         I am a Design Engineer with over 35 years experience, specializing in
-        the development of medical devices and medical equipment.
+        the design and development of medical devices and medical equipment.
       </p>
 
       <p class="mb-4">
         I have worked for design consultancies in the UK and USA, with clients
-        ranging from individual inventors to international corporations.
+        ranging from individual inventors, to surgeons with a great idea, to
+        international corporations.
       </p>
 
       <p class="mb-4">
         As well as medical devices, I have experience developing a range of
         domestic appliances, office furniture, and ruggedized equipment.
       </p>
+
+      <p class="mb-4">
+        I look forward to helping you with your design project, whether it is
+        just an idea, or a fully developed product that needs some
+        improvements.
+      </p>
     </div>
-    <div class="block bg-red-100 ml-2">b</div>
+
+    <div class="ml-2 aspect-square items-center relative p-2 rounded-lg">
+      {% for item in grid %}
+        <div class="size-60 absolute {{ item.pos }} z-0 hover:z-100">
+          <a href="{{ item.link }}" class="block w-full h-full">
+            <img 
+              src="{{ item.imgSrc }}" 
+              alt="{{ item.imgAlt }}" 
+              class="rounded-lg w-full h-full object-cover brightness-80 transform transition-transform duration-500 hover:scale-105 hover:brightness-100" />
+            </a>
+        </div>
+        {% endfor %}
+        <div class="right-4 bottom-4 absolute">
+          <button class="btn btn-lg btn-primary mx-auto">
+            <a href="/portfolio/">More ...</a>
+          </button>
+        </div>
+      </div>
   </div>
 </div>
