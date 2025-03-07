@@ -29,8 +29,8 @@ heading: Jalapeno Design
   </div>
 
   <div class="grid grid-cols-2 gap-8">
-    <div class="px-4 mr-2aspect-square">
-      <p class="mb-4 text-xl ">
+    <div class="px-4 mr-2aspect-square text-xl">
+      <p class="mb-4 ">
         I am a Design Engineer with over 35 years experience, specializing in
         the design and development of medical devices and medical equipment.
       </p>
@@ -63,14 +63,17 @@ heading: Jalapeno Design
             <img 
               src="{{ item.imgSrc }}" 
               alt="{{ item.imgAlt }}" 
-              class="rounded-lg w-full h-full object-cover brightness-80 transform transition-transform duration-500 hover:scale-105 hover:brightness-100 shadow-md " />
+              class="rounded-lg w-full h-full object-cover brightness-80 transform transition-transform duration-500 hover:scale-105 hover:brightness-100 shadow-md " 
+              width="300px"/>
             </a>
         </div>
         {% endfor %}
         <div class="right-4 bottom-4 absolute">
-          <button class="btn btn-lg btn-primary mx-auto">
-            <a href="/portfolio/">More ...</a>
-          </button>
+          <a href="/portfolio/">
+            <button class="btn btn-lg btn-primary mx-auto">
+              More ...
+            </button>
+          </a>
         </div>
       </div>
     </div>

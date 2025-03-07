@@ -1,7 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography"; /* https://github.com/tailwindlabs/tailwindcss-typography */
 @plugin "daisyui"{
-  themes: light --default, business --prefersdark;
+  themes: light --default, 
+  business --prefersdark;
 }
 
 /* 
@@ -12,6 +13,8 @@ https://dequeuniversity.com/rules/axe/4.10/color-contrast
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
+  prefersdark: false;
+  color-scheme: "light";
 
   --color-primary: oklch(50% 0.134 242.749);
   --color-primary-content: oklch(100% 0 0);
@@ -25,6 +28,8 @@ https://dequeuniversity.com/rules/axe/4.10/color-contrast
 @plugin "daisyui/theme" {
   name: "business";
   default: false;
+  prefersdark: true;
+  color-scheme: "business";
 
   --color-primary: oklch(68.628% 0.185 148.958);
   --color-primary-content: oklch(0% 0 0);
