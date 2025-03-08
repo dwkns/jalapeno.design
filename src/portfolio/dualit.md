@@ -17,6 +17,11 @@ slideshow:
  - /assets/images/dualit/58990973-9e93-4443-aa6f-44cc33635698_1.316128c46f1593168ca8c913aae0b51b-2548172399.jpeg
  - /assets/images/dualit/AWS-Polished-Side-Web_Grey.webp
  - /assets/images/dualit/stainless-still-dualit-electric-kettles-72460-64_1000-620887495.jpg
+caption:
+  - The Blender was unique as it had a glass jar and a safety interlock.
+  - Combi toaster has a rack for grilled cheese toasties.
+  - All the toasters sizes use the same mechanical components.
+  - Nice shot showing the reflections in the chrome. 
 headings:
   - background
 ---
