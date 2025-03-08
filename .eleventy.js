@@ -67,6 +67,16 @@ module.exports = function (eleventyConfig) {
     return value;
   });
 
+  eleventyConfig.addFilter("length", function(JSONarray) {
+    arr = [];
+    len = 0;
+    for(key in JSONarray) {
+      arr.push(key);
+      } 
+    len = arr.length;    
+    return len;
+  });
+
     // Custom filter to split Patent Number data
     eleventyConfig.addFilter("splitPatentNumber", function(value) {
       const match = value.match(/\[(.*?)\]\((.*?)\)/);

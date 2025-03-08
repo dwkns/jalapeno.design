@@ -1,31 +1,28 @@
 <!-- project-card start -->
-<div class="card w-full shadow-md hover:shadow-lg mb-4 rounded-md border border-base-100 hover:border-base-200">
-  <a href="{{ post.url }}">
-    <div class="w-full p-2">
+<div class="card mb-4 w-full rounded-md border border-base-100 shadow-md hover:border-base-200 hover:shadow-lg">
+  <div class="w-full p-2 pb-0">
+    <a href="{{ post.url }}">
       <img
-        class=""
-        src="{{ post.data.hero_image }}"
-        alt="{{ post.data.title }}"
-        class=""
-      />
+      alt="{{ post.data.hero_image_alt }}"
+      src="{{ post.data.hero_image }}"
+      class="aspect-2/1 w-full" 
+      eleventy:width="600" />
+    </a>
+  </div>
+
+  <div class="card-body pt-0 pl-2 pr-2 pb-2">
+    <div class="card-title text-primary">
+      <h2 class="pt-2 pb-0">{{ post.data.title }}</h2>
     </div>
-  </a>
-  <div class="card-body">
-    <div class="card-title text-primary">{{ post.data.title }}</div>
-    <p class="">
-      {{ post.data.description }}
-    </p>
+    <p class="text-[18px]">{{ post.data.description }}</p>
     <p class="text-xs">Reading Time: {{ post.content | timeToRead }}</p>
     <div class="card-actions justify-end">
-      {% for tag in post.data.tags %} {% if tag != "portfolio" %}
+      <!-- {% for tag in post.data.tags %} {% if tag != "portfolio" %}-->
       <a href="/tags/{{ tag | slug }}/" class="">
-        <span class="btn btn-sm btn-primary">
-          {{ tag }}
-        </span>
+        <span class="btn btn-sm btn-primary"> {{ tag }} </span>
       </a>
-      {% endif %} {% endfor %}
+      <!-- {% endif %} {% endfor %} -->
     </div>
   </div>
 </div>
-
 <!-- project-card end -->

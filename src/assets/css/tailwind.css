@@ -1,9 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography"; /* https://github.com/tailwindlabs/tailwindcss-typography */
-@plugin "daisyui"{
-  themes: light --default, 
-  business --prefersdark;
-}
+@plugin "daisyui"{}
 
 /* 
 https://daisyui.com/theme-generator/
@@ -16,7 +13,7 @@ https://dequeuniversity.com/rules/axe/4.10/color-contrast
   prefersdark: false;
   color-scheme: "light";
 
-  --color-primary: oklch(50% 0.134 242.749);
+  --color-primary: oklch(44.69% 0.1181 135.05);
   --color-primary-content: oklch(100% 0 0);
 
   --color-accent: oklch(69.78% 0.1974 45.4);
@@ -31,7 +28,7 @@ https://dequeuniversity.com/rules/axe/4.10/color-contrast
   prefersdark: true;
   color-scheme: "business";
 
-  --color-primary: oklch(68.628% 0.185 148.958);
+  --color-primary: oklch(77.05% 0.1209 135.91);
   --color-primary-content: oklch(0% 0 0);
 
   --color-accent: oklch(69.78% 0.1974 45.4);
@@ -43,6 +40,11 @@ extend: {
   screens: {
     print: { raw: 'print' }
   }
+}
+
+/* Increase font size everywhere */
+html {
+  font-size: 18px
 }
 
 /* Custom CSS */
@@ -62,7 +64,7 @@ h2 {
 
 h1, h2, h3, h4, h5, h6 {
   @apply py-2 text-primary;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 

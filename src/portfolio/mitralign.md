@@ -8,17 +8,11 @@ accent: bg-[#2e6ca0]
 tags:
     - portfolio
     - surgical
-
 slideshow:
     - /assets/images/mitralign/Mitralign_LHS_1_690x450.jpg
     - /assets/images/mitralign/Mitralign_Process_10_450x355.jpg
     - /assets/images/mitralign/Mitralign_Process_11_450x355.jpg
     - /assets/images/mitralign/Mitralign_Process_12_450x355.jpg
-slideshowNotes:
-    - placing
-    - planting
-    - tightening
-    - beating
 awards:
 links:
     - https://www.ecrjournal.com/articles/mitralign-percutaneous-annuloplasty-system-treatment-functional-mitral-regurgitation
@@ -50,9 +44,6 @@ We were involved in 5 steps:
 
 
 ## Slideshow
-
-{% if slideshow %}
-{% include "swiper.njk" %}
-{% endif %}
+{% include "carousel.njk"  %}
 
 ## Solution
