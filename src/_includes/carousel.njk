@@ -1,16 +1,33 @@
 <!-- image reel -->
 <div class="w-full aspect-5/3 py-4 relative">
-      <div class="absolute top-0 right-0 aspect-square w-1/3 hover:scale-110 hover:z-10 bg-white rounded-lg">
-        <img src="{{ slideshow[0] }}" alt="placeholder" class="h-full w-full rounded-lg object-cover shadow-md opacity-70 hover:opacity-100" />
+      <div class="absolute top-0 right-0 aspect-square w-1/3 transform transition-transform duration-500 hover:scale-110 hover:z-10 bg-white rounded-lg">
+        <img 
+          src="{{ slideshow[0] }}" 
+          alt="placeholder" 
+          class="h-full w-full rounded-lg object-cover shadow-md  brightness-90 hover:brightness-100" 
+          eleventy:widths="300"
+          />
       </div>
-      <div class="absolute bottom-0 left-8/18 aspect-square w-1/3 hover:scale-110 hover:z-10 bg-white rounded-lg">
-        <img src="{{ slideshow[1] }}" alt="placeholder" class="h-full w-full rounded-lg object-cover shadow-md opacity-80 hover:opacity-100" />
+      <div class="absolute bottom-0 left-8/18 aspect-square w-1/3 transform transition-transform duration-500 hover:scale-110 hover:z-10 bg-white rounded-lg">
+        <img 
+          src="{{ slideshow[1] }}" 
+          alt="placeholder" 
+          class="h-full w-full rounded-lg object-cover shadow-md brightness-90 hover:brightness-100"
+          eleventy:widths="300" />
        </div>
-      <div class="absolute top-0 left-4/18 aspect-square w-1/3 hover:scale-110 hover:z-10 bg-white rounded-lg">
-        <img src="{{ slideshow[2] }}" alt="placeholder" class="h-full w-full rounded-lg object-cover shadow-md brightness-80 hover:brightness-100"  />
+      <div class="absolute top-0 left-4/18 aspect-square w-1/3 transform transition-transform duration-500 hover:scale-110 hover:z-10 bg-white rounded-lg">
+        <img 
+          src="{{ slideshow[2] }}" 
+          alt="placeholder" 
+          class="h-full w-full rounded-lg object-cover shadow-md brightness-90 hover:brightness-100"
+          eleventy:widths="300"  />
       </div>
-      <div class="absolute bottom-0 left-0 aspect-square w-1/3 hover:scale-110 hover:z-10 bg-white rounded-lg">
-        <img src="{{ slideshow[3] }}" alt="placeholder" class="h-full w-full rounded-lg object-cover shadow-md brightness-80 hover:brightness-100"  />
+      <div class="absolute bottom-0 left-0 aspect-square w-1/3 transform transition-transform duration-500 hover:scale-110 hover:z-10 bg-white rounded-lg">
+        <img 
+          src="{{ slideshow[3] }}" 
+          alt="placeholder" 
+          class="h-full w-full rounded-lg object-cover shadow-md brightness-90 hover:brightness-100"  
+          eleventy:widths="300" />
       </div>
 </div>
 <!-- image reel end -->
