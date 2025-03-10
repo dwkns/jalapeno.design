@@ -59,6 +59,10 @@ module.exports = function (eleventyConfig) {
     return new Date().getFullYear()
   });
 
+  eleventyConfig.addFilter("ucfirst", function(value) {
+    return String(value).charAt(0).toUpperCase() + String(value).slice(1);
+  });
+
   // Custom Split Filter
   eleventyConfig.addFilter("split", function(value, delimiter) {
     if (typeof value === "string") {
