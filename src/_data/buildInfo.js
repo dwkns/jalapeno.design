@@ -1,12 +1,15 @@
-module.exports = () => {
-    const rev = fs.readFileSync('.git/HEAD').toString().trim();
-        if (rev.indexOf(':') === -1) {
-            return rev;
-        } else {
-            return fs.readFileSync('.git/' + rev.substring(5)).toString().trim();
-        }
+const childProcess = require('child_process');
 
-        return {
-            hash: rev
-        };
+module.exports = () => {
+  // https://stackoverflow.com/a/34518749/5323344
+  const latestGitCommitHash =
+    childProcess
+    .execSync('git rev-parse --short HEAD')
+    .toString()
+    .trim();
+
+  return {
+    // ... other values here
+    hash: process.env.GIT_COMMIT_HASH || latestGitCommitHash,
+  }
 };
