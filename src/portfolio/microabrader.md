@@ -13,7 +13,7 @@ hero_image: /assets/images/echo/Echo_Hero_2000x1000.jpg
 accent: bg-[#768bb2]
 slides: 4
 slideshow: 
- - /assets/images/dualit/41VQAN3Z81L-4019837987.jpg
+ - /assets/images/echo/Echo_Glamour_1_210x316.jpg
  - /assets/images/dualit/AWS-Combi_2_1-Polished-Front-Web_Grey.webp
  - /assets/images/dualit/58990973-9e93-4443-aa6f-44cc33635698_1.316128c46f1593168ca8c913aae0b51b-2548172399.jpeg
  - /assets/images/dualit/AWS-Polished-Side-Web_Grey.webp

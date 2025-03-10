@@ -10,9 +10,14 @@ accent: bg-[#58a7e5]
 hero_image: /assets/images/normatec/normatec_hero_2000x1000.jpg
 slideshow:
   - https://res.cloudinary.com/dqvadtc7k/image/upload/v1740521801/IMG_2296_va1cty.jpg
-  - https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_LHS_1_690x450.jpg
+  - /assets/images/normatec/NormaTec-Pulse-2-Hose.jpg
   - https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_Process_5_450x355.jpg
-  - https://dev.eclipsepd.com/wp-content/uploads/2023/05/Normatec_Process_5_450x355.jpg
+  - /assets/images/normatec/accessory_hose.webp
+caption:
+  - CNC cut foam models for quick client feedback.
+  - The hose connection uses common connectors and has a positive locking action. Extensive testing was done to make sure everything was leakfree when the connector was flexed.
+  - Early concept model with wall mount.
+  - The junction box used different mold textures for the logo.
 headings:
   - background
   - problem

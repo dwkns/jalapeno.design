@@ -30,7 +30,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("env", process.env.ELEVENTY_ENV);
 
   // Plug Ins
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin,{
+    formats: ["avif", "webp", "jpeg"],
+
+  });
+
+
   eleventyConfig.addPlugin(timeToRead);
 
   // Markdown Overrides for adding id to headings
@@ -54,7 +59,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('version', function () {
     return now
   });
-
   eleventyConfig.addShortcode('year', function () {
     return new Date().getFullYear()
   });
@@ -67,36 +71,20 @@ module.exports = function (eleventyConfig) {
     return value;
   });
 
-  eleventyConfig.addFilter("length", function(JSONarray) {
-    arr = [];
-    len = 0;
-    for(key in JSONarray) {
-      arr.push(key);
-      } 
-    len = arr.length;    
-    return len;
-  });
-
-    // Custom filter to split Patent Number data
-    eleventyConfig.addFilter("splitPatentNumber", function(value) {
-      const match = value.match(/\[(.*?)\]\((.*?)\)/);
-      if (match) {
-        return {
-          text: match[1],
-          url: match[2]
-        };
-      }
+  // Custom filter to split Patent Number data
+  eleventyConfig.addFilter("splitPatentNumber", function(value) {
+    const match = value.match(/\[(.*?)\]\((.*?)\)/);
+    if (match) {
       return {
-        text: value,
-        url: "#"
+        text: match[1],
+        url: match[2]
       };
-    });
-
-  eleventyConfig.addDataExtension("csv", (contents) => {
-    const records = parse(contents, {
-      columns: true,
-      skip_empty_lines: true,
-    });
-    return records;
+    }
+    return {
+      text: value,
+      url: "#"
+    };
   });
+
+
 };
