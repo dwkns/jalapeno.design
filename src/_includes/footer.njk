@@ -1,18 +1,26 @@
-    <footer class="w-full border-t border-t-2 border-gray-200 dark:border-gray-700 backdrop-blur-lg">
+    <footer class="w-full border-t-2 border-gray-200 dark:border-gray-700 backdrop-blur-xl bg-base-100">
       <div class="md:flex max-w-7xl mx-auto">      
-        <div class="w-[200px]"></div>
+        <div class="w-[244px] block"></div>
         <div class="w-[20px] hidden lg:block flex-none"></div>
 
         <div class="w-full mx-4 my-4 flex justify-between font-extralight">
-          <div>
-            <img src="/assets/images/jala.dev.svg"
-              alt="QR Code for jala.dev"
-              class="max-w-24 max-h-24 rounded-md"
-              width="{{ 24 * 4 }}" />
-          </div>
 
           <div class="text-sm self-center">
             <p>&copy; {% year %} <a class="mx-1" href="{{ site.url }}">{{ site.name }}</a></p>
+          </div>  
+
+          <div>
+            <img src="/assets/images/jala.dev.svg"
+              alt="QR Code for jala.dev"
+              class="max-w-24 max-h-24 rounded-md hidden print:block"
+              width="{{ 24 * 4 }}" 
+              eleventy:formats="svg"
+              />
+            <img src="/assets/images/logo.svg"
+              alt="Logo for jala.dev"
+              class="max-w-12 max-h-12 rounded-md print:hidden"
+              width="{{ 12 * 4 }}"
+              eleventy:widths="{{ 12 * 4 }}" />
           </div>
          
           <div class="text-right text-sm self-center max-w-[300px]">
