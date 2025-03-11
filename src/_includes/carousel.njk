@@ -1,6 +1,6 @@
 <!-- image reel -->
 <div class="w-full aspect-5/3 p-4 relative">
-      <div class="border-2 border-base-300 block w-full h-full rounded-lg"></div
+      <div class="border-2 border-base-300 block w-full h-full rounded-lg">
 
       <div class="absolute top-0 right-0 aspect-square w-1/3 zoomie hover:z-10 bg-white rounded-lg">
         <img 
@@ -39,71 +39,27 @@
         />
       </div>
 </div>
+
 <!-- modal windows -->
-<dialog id="my_modal_0" class="modal">
+{% set rowNo = 0 %}
+{% for slide in slideshow %}
+<dialog id="my_modal_{{ rowNo }}" class="modal">
   <div class="modal-box p-2">
-    <img 
-      src="{{ slideshow[0] }}" 
-      alt="placeholder" 
-      class="h-full w-full rounded-sm object-cover shadow-md" 
-      eleventy:widths="1000" />
-      <div class="w-full py-2 text-sm text-center">
-        {{ caption[0] }}
-      </div>
-  </div>
-  <form method="dialog" class="modal-backdrop">
-    <button>close</button>
-  </form>
-</dialog>
-
-<dialog id="my_modal_1" class="modal">
-  <div class="modal-box p-2">
-    <img 
-      src="{{ slideshow[1] }}" 
-      alt="placeholder" 
-      class="h-full w-full rounded-sm object-cover shadow-md" 
-      eleventy:widths="1000" />
-      <div class="w-full py-2 text-sm text-center">
-        {{ caption[1] }}
-      </div>
-  </div>
-  <form method="dialog" class="modal-backdrop">
-    <button>close</button>
-  </form>
-</dialog>
-
-<dialog id="my_modal_2" class="modal">
-  <div class="modal-box p-2">
-    <img 
-      src="{{ slideshow[2] }}" 
-      alt="placeholder" 
-      class="h-full w-full rounded-sm object-cover shadow-md" 
-      eleventy:widths="1000" />
-      <div class="w-full py-2 text-sm text-center">
-        {{ caption[2] }}
-      </div>
-  </div>
-  <form method="dialog" class="modal-backdrop">
-    <button>close</button>
-  </form>
-</dialog>
-
-<dialog id="my_modal_3" class="modal">
-  <div class="modal-box p-2">
-    <img 
-    src="{{ slideshow[3] }}" 
+  <img 
+    src="{{ slide.img }}" 
     alt="placeholder" 
     class="h-full w-full rounded-sm object-cover shadow-md" 
-    eleventy:widths="1000" />
-    <div class="w-full py-2 text-sm text-center">
-      {{ caption[3] }}
-    </div>
+    eleventy:widths="1000"  />
+      <div class="w-full py-2 text-sm text-center">
+        {{ slide.caption }}
+      </div>
   </div>
   <form method="dialog" class="modal-backdrop">
     <button>close</button>
   </form>
 </dialog>
-
-
+  {% assign rowNo = rowNo + 1 %}
+{% endfor %}
+</div>
 <!-- image reel end -->
 

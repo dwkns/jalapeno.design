@@ -56,9 +56,9 @@ headings:
 
 ## Solution
 
-27 percent smaller while maintaining all the same power and even more functionality than previous models
-Equipped with enhanced robustness and durability including chemically enhanced glass and ergonomic upgrades
-More attainable, with a debut price point at $200 less than the 2018 PULSE Series 
+* 27 percent smaller while maintaining all the same power and even more functionality than previous models
+* Equipped with enhanced robustness and durability including chemically enhanced glass and ergonomic upgrades
+* More attainable, with a debut price point at $200 less than the 2018 PULSE Series 
 
   I designed a leg pumpy thing.
 

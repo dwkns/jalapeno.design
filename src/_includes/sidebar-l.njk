@@ -31,8 +31,13 @@
                 {% for item in menu %}
                 {% set urlParts = item.url | split('/') %}
                 {% if urlParts[1] == lastPart %} 
+                  
                 <li class="text-primary">          
+                  {% if lastPart != "portfolio" %}
                   {{ item.name }} &#8921;
+                  {% else %}
+                  <a href="{{ item.url }}" class="">{{ item.name }} &#8921;</a>
+                  {% endif %}
                 </li>
                 {% else %}
                 <li>

@@ -10,6 +10,8 @@ const markdownItAnchor = require("markdown-it-anchor");
 // Time to read plugin
 const timeToRead = require('eleventy-plugin-time-to-read');
 
+
+
 // CSV parser
 const { parse } = require('csv-parse');
 
@@ -35,6 +37,10 @@ module.exports = function (eleventyConfig) {
 
   });
 
+  module.exports.config = {
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk"
+  };
 
   eleventyConfig.addPlugin(timeToRead);
 
