@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: Surgical Devices
+title: Cardiac Surgical Devices
 heading: Cardiac Surgery Devices
 description: A series of devices for tightening the annulus of the mitral heart valve
 hero_image: /assets/images/mitralign/mitralign_hero.jpg

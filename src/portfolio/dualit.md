@@ -1,5 +1,5 @@
 ---
-title: Dualit Kitchen Equipment
+title: Kitchen Equipment
 layout: portfolio
 description: A Design classic
 heading: Dualit Kitchen Equipment

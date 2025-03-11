@@ -1,27 +1,61 @@
 ---
 layout: default.njk
 title: Design Awards
+images:
+  - src: /assets/images/AC3-Optimus-CP-MDEA-Award-2019.png
+    alt: AC3 Optimus CP MDEA Award 2019
+    title: MDEA 2019 Bronze Award
+    text: The Teleflex AC3 Optimus CP received a Bronze Award in the 2019 Medical Design Excellence Awards in the Cardiology category.
+    link: /portfolio/iabp-cart/
+  - src: /assets/images/dog-collar-2020.png
+    alt: SpotOn Virtual Fence Wins 2020 CES Innovation Award
+    title: CES 2020 Honoree
+    text: The SpotOn Virtual Fence was named a CES 2020 Innovation Awards Honoree in the Wearable Technologies category.
+    link: /portfolio/collar/
 ---
 
 <div
-  class="suprose border border-2 border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg px-4 pb-4 min-h-{{
+  class="suprose border-2 border-l-0 border-gray-200 dark:border-gray-700 pl-4 rounded-br-lg rounded-tr-lg px-4 pb-4 min-h-{{
     iHeight
   }}"
 >
     <h1 id="skills">Design Awards</h1>
 
-
-
     <div class="w-full">
-      <img 
-        src="/assets/images/AC3-Optimus-CP-MDEA-Award-2019.jpg" 
-        alt="AC3 Optimus CP MDEA Award 2019" 
-        class="w-full" />
+      <div class="grid grid-cols-2 gap-4">
+{%- for image in images %}  
+
+<!-- project-card start -->
+<div class="card mb-4 w-full rounded-md border border-base-100 shadow-md hover:border-base-200 hover:shadow-lg">
+  <div class="w-full pb-0">
+    <a href="{{ image.link }}">
+      <img
+      alt="{{ image.alt }}"
+      src="{{ image.src }}"
+      class="w-full rounded-sm bg-white p-4 aspect-30/18 object-cover" 
+      eleventy:widths="600" />
+    </a>
+  </div>
+
+  <div class="card-body pt-0 pl-2 pr-2 pb-2">
+    <div class="card-title text-primary">
+      <h2 class="pt-2 pb-0">{{ image.title }}</h2>
     </div>
-
-    <div class="w-full">
-      <img 
-        src="/assets/images/dog-collar-2020.png" 
-        alt="AC3 Optimus CP MDEA Award 2019" 
-        class="w-full" />
+    <p class="text-[18px]">{{ image.text }}</p>
+    <div class="card-actions justify-end">
+      <btn class="btn btn-primary">
+        <a href="{{ image.link }}">View Project</a>
+    </div>
+  </div>
 </div>
+<!-- project-card end -->
+
+{%- endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+
+

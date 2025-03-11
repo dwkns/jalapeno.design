@@ -1,5 +1,5 @@
 ---
-title: Recovery Device
+title: Exercise Recovery Device
 layout: portfolio.njk
 description: "leg pumpy thing"
 author: jalapeno.design
