@@ -37,10 +37,7 @@ module.exports = function (eleventyConfig) {
 
   });
 
-  module.exports.config = {
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk"
-  };
+
 
   eleventyConfig.addPlugin(timeToRead);
 
@@ -97,4 +94,9 @@ module.exports = function (eleventyConfig) {
   });
 
 
+};
+
+module.exports.config = {
+  htmlTemplateEngine: "njk",
+  markdownTemplateEngine: "njk"
 };
