@@ -2,6 +2,7 @@
 title: Kitchen Equipment
 layout: portfolio
 description: A Design classic
+date: 1997-01-01
 heading: Dualit Kitchen Equipment
 accent: bg-gray-500
 hero_image: /assets/images/dualit/dualit-hero.jpg

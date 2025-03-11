@@ -4,6 +4,7 @@ tags:
     - portfolio
     - consumer
     - rugged
+date: 2019-01-01
 title: GPS Dog Collar
 description: The first GPS and cellular equipped dog collar with in-built static correction.
 hero_image: /assets/images/spoton/spoton_hero.jpg

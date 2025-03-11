@@ -23,10 +23,10 @@ https://dequeuniversity.com/rules/axe/4.10/color-contrast
 }
 
 @plugin "daisyui/theme" {
-  name: "business";
+  name: "dracula";
   default: false;
   prefersdark: true;
-  color-scheme: "business";
+  color-scheme: "dracula";
 
   --color-primary: oklch(77.05% 0.1209 135.91);
   --color-primary-content: oklch(0% 0 0);
@@ -100,6 +100,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .suprose p {
   @apply mb-8;
+}
+
+.zoomie {
+  @apply transform transition-transform duration-500 hover:scale-105;
 }
 
 }

@@ -7,7 +7,7 @@ layout: default.njk
     <h1>Portfolio</h1>
     <div class="grid grid-cols-2 gap-4">
 
-  {%- for post in collections.portfolio %}
+  {%- for post in collections.portfolio | reverse %}
 {% include "project-card.njk" %}
   {%- endfor %}
 
